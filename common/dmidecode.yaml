@@ -16,6 +16,7 @@ metadata:
     - mx53loco
     - rtsm_fvp_base-aemv8a
     - juno
+    - armv8-a57
   scope:
     - functional
 
@@ -25,9 +26,10 @@ install:
         - grep
 run:
   steps:
-    - lava-test-case kernel-space-sysfs-dmi-exist --shell ls /sys/class/dmi/
-    - lava-test-case kernel-space-sysfs-dmi-id-exist --shell ls /sys/class/dmi/id
-    - lava-test-case kernel-space-sysfs-bios-date --shell cat /sys/class/dmi/id/bios_date
-    - lava-test-case kernel-space-sysfs-bios-vendor --shell cat /sys/class/dmi/id/bios_vendor
-    - lava-test-case kernel-space-sysfs-bios-version --shell cat /sys/class/dmi/id/bios_version
+    - lava-test-case kernel-space-sysfs-ls --shell ls 
+#    - lava-test-case kernel-space-sysfs-dmi-exist --shell ls /sys/class/dmi/
+#    - lava-test-case kernel-space-sysfs-dmi-id-exist --shell ls /sys/class/dmi/id
+#    - lava-test-case kernel-space-sysfs-bios-date --shell cat /sys/class/dmi/id/bios_date
+#    - lava-test-case kernel-space-sysfs-bios-vendor --shell cat /sys/class/dmi/id/bios_vendor
+#    - lava-test-case kernel-space-sysfs-bios-version --shell cat /sys/class/dmi/id/bios_version
     - ./common/scripts/dmidecode.sh
