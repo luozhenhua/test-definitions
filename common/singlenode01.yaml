@@ -5,7 +5,7 @@ metadata:
     maintainer:
         - neil.williams@linaro.org
     os:
-        - ubuntu
+        - Linux
     scope:
         - functional
     devices:
@@ -15,6 +15,9 @@ metadata:
         - beaglebone-black
         - beagle-xm
         - armv8-a57
+install:
+    git-repos:
+        - https://github.com/dawei1991/test-definitions.git
 
 run:
     steps:
