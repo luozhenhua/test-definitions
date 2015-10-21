@@ -18,6 +18,7 @@ metadata:
 
 run:
     steps:
+        - netstat -an
         - lava-test-case linux-linaro-ubuntu-netstat --shell netstat -an
         - lava-test-case linux-linaro-ubuntu-ifconfig-dump --shell ifconfig -a
         - lava-test-case linux-linaro-ubuntu-route-dump-a --shell route
