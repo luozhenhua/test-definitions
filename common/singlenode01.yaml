@@ -9,11 +9,6 @@ metadata:
     scope:
         - functional
     devices:
-        - kvm
-        - arndale
-        - panda
-        - beaglebone-black
-        - beagle-xm
         - armv8-a57
 install:
     git-repos:
